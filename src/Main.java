@@ -1,5 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("I can win!");
+        int x = 1;
+       int y = x++;
+        System.out.println(x + " | " + y);
+        int a = 1;
+        int b = ++a;
+        System.out.println(a + " | " + b);
     }
 }
