@@ -1,19 +1,21 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println(month(1));
-    }
-    public static String month (int x){
-        String month = null;
-            switch (x){
-                case 1: month = "January";
-                    break;
-                case 2: month = "February";
-                    break;
-                case 3: month = "March";
-                    break;
-                default: throw new IllegalArgumentException("The month not found.");
-
-            }
-        return month;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Your bus-stop number?");
+        int number = scanner.nextInt();
+        switch(number){
+            case 1:
+                System.out.println("Bus routes: 1, 3, 6, 19");
+                break;
+            case 2:
+                System.out.println("Bus routes: 4, 7");
+                break;
+            case 3:
+                System.out.println("Bus routes: 5, 21, 23");
+                break;
+            default: throw new IllegalArgumentException("Bus stop not found");
+        }
     }
 }
