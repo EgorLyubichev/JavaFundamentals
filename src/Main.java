@@ -1,21 +1,25 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Your bus-stop number?");
-        int number = scanner.nextInt();
-        switch(number){
-            case 1:
-                System.out.println("Bus routes: 1, 3, 6, 19");
-                break;
-            case 2:
-                System.out.println("Bus routes: 4, 7");
-                break;
-            case 3:
-                System.out.println("Bus routes: 5, 21, 23");
-                break;
-            default: throw new IllegalArgumentException("Bus stop not found");
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println(Math.round(Math.random() * 10));
+//        }
+
+        int[] massive = new int[8];
+        for (int i = 0; i < massive.length; i++) {
+            massive[i] = (int) Math.round(Math.random() * 10);
+            System.out.println(i + " | " + massive[i]);
         }
+        massive[3] = 4;
+        System.out.println(massive[0] + "|" + massive[1] + "|" + massive[2] + "|" + massive[3]);
+    }
+
+    public String[] createStringArray(final int SIZE) {
+        String[] strings = new String[SIZE];
+        for (int i = 0; i < SIZE; i++) {
+            strings[i] = String.valueOf(i);
+            System.out.println(strings[i]);
+        }
+        return strings;
     }
 }
+
